@@ -1,0 +1,296 @@
+@font-face {
+  font-family: Titulo;
+  src: url(../font/ANODETONOONE.TTF);
+}
+
+h1 {
+  font-family: Titulo;
+  font-size: 40px;
+  color: #603a03;
+}
+
+body {
+  background-image: url(../img/bg-back.png);
+}
+
+#container {
+  width: 950px;
+  height: auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: url(../img/parallax-space-backgound.png);
+  background-size: cover;
+}
+
+#fundoGame {
+  width: 950px;
+  height: 630px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-color: #fff;
+  border-style: solid;
+
+  background: url(../img/parallax-space-stars.png);
+  background-repeat: repeat;
+  background-position: right;
+  background-size: 50%;
+}
+
+#bg-planet {
+  width: 950px;
+  height: 630px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: url(../img/parallax-space-ring-planet.png);
+
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 10%;
+}
+
+#bg-planet2 {
+  width: 950px;
+  height: 630px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: url(../img/parallax-space-far-planets.png);
+
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 50%;
+}
+
+#bg-planet3 {
+  width: 950px;
+  height: 630px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: url(../img/parallax-space-big-planet.png);
+
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 10%;
+}
+
+#game {
+  width: 950px;
+  height: 630px;
+  position: relative;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+#inicio {
+  width: 350px;
+  height: 200px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  text-align: center;
+  padding: 10px;
+}
+
+.anima-fundo {
+  background-image: url(../img/parallax-space-stars.png);
+  animation: play 10s steps(100) infinite;
+}
+
+.anima-fundo2 {
+  background-image: url(../img/parallax-space-ring-planet.png);
+  animation: play2 4s steps(100) infinite;
+}
+
+.anima-fundo3 {
+  background-image: url(../img/parallax-space-far-planets.png);
+  animation: play2 5s steps(100) infinite;
+}
+
+.anima-fundo4 {
+  background-image: url(../img/parallax-space-big-planet.png);
+  animation: play2 5s steps(100) infinite;
+}
+
+@keyframes play {
+  from {
+    background-position: 950px;
+  }
+  to {
+    background-position: -950px;
+  }
+}
+
+@keyframes play2 {
+  from {
+    background-position: 970px;
+  }
+  to {
+    background-position: -950px;
+  }
+}
+
+#jogador {
+  width: 86px;
+  height: 66px;
+  position: absolute;
+  left: 8px;
+  top: 179px;
+  background-image: url(../img/player/player1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* border: solid; */
+}
+
+#inimigo {
+  width: 256px;
+  height: 96px;
+  position: absolute;
+  /* left: 689px; */
+  left: 880px;
+  top: 253px;
+  background-image: url(../img/enemy/enemy1.png);
+  background-repeat: no-repeat;
+  background-size: 30%;
+}
+
+.inimigos {
+  width: 96px;
+  height: 90px;
+  position: absolute;
+  /* left: 689px; */
+  left: 880px;
+  /* top: 253px; */
+  top: 0px;
+  background-image: url(../img/enemy/enemy1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* border: solid; */
+  animation: playInimigo 0.5s infinite;
+}
+
+.anima-inimigo {
+  background-image: url(../img/enemy/enemy1.png);
+  animation: playInimigo 0.5s infinite;
+}
+
+@keyframes playInimigo {
+  0% {
+    background-image: url(../img/enemy/enemy1.png);
+  }
+  25% {
+    background-image: url(../img/enemy/enemy2.png);
+  }
+  50% {
+    background-image: url(../img/enemy/enemy3.png);
+  }
+  75% {
+    background-image: url(../img/enemy/enemy4.png);
+  }
+  100% {
+    background-image: url(../img/enemy/enemy5.png);
+  }
+}
+
+#disparo {
+  /* width: 50px;
+  height: 16px; */
+  width: 49px;
+  height: 16px;
+  position: absolute;
+  background-image: url(../img/shoot/shoot1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* border: solid; */
+}
+
+.anima-disparo {
+  background-image: url(../img/shoot/shoot1.png);
+  animation: playDisparo 0.5s infinite;
+}
+
+@keyframes playDisparo {
+  0% {
+    background-image: url(../img/shoot/shoot1.png);
+  }
+  100% {
+    background-image: url(../img/shoot/shoot2.png);
+  }
+}
+
+/* Explosão */
+.explosao {
+  width: 256px;
+  height: 96px;
+  position: absolute;
+  background-image: url(../img/explosion/sprites/explosion1.png);
+  background-repeat: no-repeat;
+  background-size: 30%;
+  /* left: 880px;
+  top: 0px; */
+  animation: playExplosao 0.5s;
+}
+
+.anima-explosao {
+  background-image: url(../img/explosion/sprites/explosion1.png);
+  animation: playExplosao 0.5s;
+}
+
+@keyframes playExplosao {
+  0% {
+    background-image: url(../img/explosion/sprites/explosion1.png);
+  }
+  25% {
+    background-image: url(../img/explosion/sprites/explosion2.png);
+  }
+  50% {
+    background-image: url(../img/explosion/sprites/explosion3.png);
+  }
+  75% {
+    background-image: url(../img/explosion/sprites/explosion4.png);
+  }
+  100% {
+    background-image: url(../img/explosion/sprites/explosion5.png);
+  }
+}
+#placar {
+  width: 450px;
+  height: 50px;
+  position: absolute;
+  left: 5px;
+  top: 590px;
+}
+
+h2 {
+  font-family: Titulo;
+  font-size: 20px;
+  color: #fff;
+}
+
+h3 {
+  font-family: Titulo;
+  font-size: 20px;
+  color: #603a03;
+}
+
+#fim {
+  width: 350px;
+  height: 200px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  text-align: center;
+  padding: 10px;
+}
